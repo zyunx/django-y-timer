@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: django-y-timer
+Version: 0.0.1
+Summary: A Django app to schedule timers using database as storage.
+Home-page: https://github.com/zyunx/django-y-timer
+Author: Zhang Yun
+Author-email: zyunx.net@gmail.com
+License: BSD-3-Clause
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+License-File: LICENSE
+License-File: AUTHORS
+
+=======
+Ytimer
+=======
+
+Purpose
+-------
+Ytimer is a Django app to schedule timers using database as storage.
+
+Quick start
+-----------
+
+1. Add "ytimer" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...,
+        "ytimer",
+    ]
+
+2. Include the polls URLconf in your project urls.py like this::
+
+    path("", include("ytimer.urls")),
+
+3. Run ``python manage.py migrate`` to create the ytimer models.
+
+4. Create a ytimer_handler modeule in your app. See ytimer_example for ytimer's usage.
+
+5. POST http://127.0.0.1:8000/default_timer_handler/ to triger the timers.
